@@ -84,16 +84,16 @@ while True:
                 pygame.event.post(pygame.event.Event(pygame.QUIT))
 
     # уточним, что направление движения допустимо
-    if change_to == 'up' and direction != 'down':
+    if change_to == 'up':
         direction = 'up'
         snake_head[1] -= head
-    if change_to == 'down' and direction != 'up':
+    if change_to == 'down':
         direction = 'down'
         snake_head[1] += head
-    if change_to == 'left' and direction != 'right':
+    if change_to == 'left':
         direction = 'left'
         snake_head[0] -= head
-    if change_to == 'right' and direction != 'left':
+    if change_to == 'right':
         direction = 'right'
         snake_head[0] += head
 
