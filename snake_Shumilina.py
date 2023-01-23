@@ -74,10 +74,10 @@ while True:
             pygame.quit()
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP: change_to = 'up'
-            if event.key == pygame.K_DOWN: change_to = 'down'
-            if event.key == pygame.K_LEFT: change_to = 'left'
-            if event.key == pygame.K_RIGHT: change_to = 'right'
+            if event.key == pygame.K_UP and direction != 'down': change_to = 'up'
+            if event.key == pygame.K_DOWN and direction != 'up': change_to = 'down'
+            if event.key == pygame.K_LEFT and direction != 'right': change_to = 'left'
+            if event.key == pygame.K_RIGHT and direction != 'left': change_to = 'right'
             if event.key == pygame.K_1: pygame.mixer.music.pause()
             if event.key == pygame.K_2: pygame.mixer.music.play()
             if event.key == pygame.K_ESCAPE:
